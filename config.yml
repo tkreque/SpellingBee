@@ -1,0 +1,13 @@
+settings:
+  letters:
+    required: f
+    optional:
+    - a
+    - u
+    - i
+    - r
+    - s
+    - t
+  files:
+    word: ./words.txt
+    result: ./result.txt
