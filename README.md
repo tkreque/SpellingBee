@@ -1,6 +1,6 @@
-# Wordle script
+# Spelling Bee script
 
-A simple python script to help in solving any wordle.
+A simple python script to help in solving any Spelling Bee.
 A list a words needs to be added in the `words.txt` file and the `config.yml` needs to receive the **required letter** and **optional letters**.
 
 Once the script is executed it will generate the `result.txt` file with the result of the filter.
