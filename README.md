@@ -35,10 +35,11 @@ python3 filter.py
 ```
 
 ```mermaid
-"layer/aws/rds"-->"live/_global/aws/rds.hcl";
-"live/<env>/aws/vpc"-->"live/_global/aws/rds.hcl";
-"live/<env>/aws/kms"-->"live/_global/aws/rds.hcl";
-"live/<env>/env.yml"-->"live/root.hcl";
-"live/_global/aws/rds.hcl"-->"live/<env>/aws/rds/terragrunt.hcl";
-"live/root.hcl"-->"live/<env>/aws/rds/terragrunt.hcl";
+graph TD;
+  A[layer/aws/rds] --> E[live/_global/aws/rds.hcl];
+  B [live/<env>/aws/vpc] --> E;
+  C [live/<env>/aws/kms] --> E;
+  D [live/<env>/env.yml] --> F[live/root.hcl];
+  E --> G[live/<env>/aws/rds/terragrunt.hcl];
+  F --> G;
 ```
