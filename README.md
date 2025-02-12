@@ -36,10 +36,10 @@ python3 filter.py
 
 ```mermaid
 graph TD;
-    layer/aws/rds-->live/_global/aws/rds.hcl;
-    live/<env>/aws/vpc-->live/_global/aws/rds.hcl;
-    live/<env>/aws/kms-->live/_global/aws/rds.hcl;
-    live/<env>/env.yml-->live/root.hcl;
-    live/_global/aws/rds.hcl-->live/<env>/aws/rds/terragrunt.hcl;
-    live/root.hcl-->live/<env>/aws/rds/terragrunt.hcl;
+    "layer/aws/rds"-->"live/_global/aws/rds.hcl";
+    "live/<env>/aws/vpc"-->"live/_global/aws/rds.hcl";
+    "live/<env>/aws/kms"-->"live/_global/aws/rds.hcl";
+    "live/<env>/env.yml"-->"live/root.hcl";
+    "live/_global/aws/rds.hcl"-->"live/<env>/aws/rds/terragrunt.hcl";
+    "live/root.hcl"-->"live/<env>/aws/rds/terragrunt.hcl";
 ```
