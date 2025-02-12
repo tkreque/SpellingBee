@@ -33,13 +33,3 @@ settings:
 ```bash
 python3 filter.py
 ```
-
-```mermaid
-graph TD;
-  A["layer/aws/rds"] --> E["live/_global/aws/rds.hcl"];
-  B["live/\<env\>/aws/vpc"] --> E;
-  C["live/env/aws/kms"] --> E;
-  D["live/env/env.yml"] --> F["live/root.hcl"];
-  E --> G["live/env/aws/rds/terragrunt.hcl"];
-  F --> G;
-```
